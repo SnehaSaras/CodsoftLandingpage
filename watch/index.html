@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Website Design HTML CSS JS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--boxicons link---->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--google fonts---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+    family=MuseoModerno:wght@200;300;400;500;600;800;900&display=swap" rel="
+    stylesheet">
+</head>
+<body>
+
+    <!--header---->
+    <header>
+        <a href="#" class="logo"><i class='bx bx-stopwatch'></i>Honor</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#smartwatch">SmartWatch</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="h-main">
+            <a href="#store" class="h-btn">Buy Now</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </div>
+    </header>
+    <!--hero section---->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>SmartWatch</h1>
+            <h4>Element serie</h4>
+            <p>Smartwatches have revolutionized the way we interact with technology 
+            by bringing essential features to our wrists.</p>
+            
+        </div>
+        <div class="hero-img">
+            <img src="pinks.png">
+        </div>
+    </section>
+    <div class="down-arrow">
+        <i class='bx bx-down-arrow-alt'></i>
+    </div>
+    <h1 class="smart" id="smartwatch">SMART WATCHES</h1>
+    <h2 class="smartb"><a href="#smartwatch">BUY NOW</a></h2>
+    <div class="hero-in">
+        <div class="box">
+            <h3>Black</h3>
+            <h5>Element</h5>
+            <img src="Blacky.png">
+        </div>
+        <div class="box">
+            <h3>White</h3>
+            <h5>Element</h5>
+            <img src="whites.png">
+        </div>
+        <div class="box">
+            <h3>Blue</h3>
+            <h5>Element</h5>
+            <img src="blues.png">
+        </div>
+    </div>
+    <div class ="about" id="about">
+        <h1 class="about-h1">About Us</h1>
+        <br></br>
+        <div class="flex-container">
+            <div class="watch-img">
+                <img class="watchabout" src="sandals.png" alt="watchimage"/>
+            </div>
+            <div class="para">
+                <p class ="about -p">
+                    The Honor Smartwatches go beyond the ordinary. With features like voice assistants,
+                    customizable watch faces, and music playback,
+                    you can tailor your smartwatch experience to suit your preferences and needs.
+                    We invite you to experience the synergy of style and technology that Honor Smartwatches offer.
+                    Elevate your everyday, simplify your tasks,
+                    and make each moment count with a smartwatch that's designed to complement your life.
+                    We believe that quality speaks for itself. Our commitment to using premium materials
+                    and rigorous testing processes ensures that each Honor Smartwatch is a testament to durability and reliability.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Section -->
+<section class="contact" id="contact">
+    <h1 class="contact-heading">Contact Us</h1>
+    <div class="contact-form">
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" class="contact-btn">Submit</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.navlist a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    <!--js file link---->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
